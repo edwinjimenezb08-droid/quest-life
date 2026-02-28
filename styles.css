@@ -1,0 +1,201 @@
+:root {
+  --bg: #0b0b14;
+  --card: #161626;
+  --text: #f5f5ff;
+  --muted: #aaaae0;
+  --purple: #7534ff;
+  --blue: #24a6ff;
+  --gold: #f6c23e;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(circle at top, #1a1940, var(--bg));
+  color: var(--text);
+}
+
+.app-shell {
+  max-width: 440px;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 1rem 1rem 5rem;
+}
+
+.hidden { display: none !important; }
+
+.card {
+  background: linear-gradient(145deg, #1a1932, var(--card));
+  border: 1px solid #2d2d4a;
+  border-radius: 16px;
+  padding: 0.9rem;
+  margin-bottom: 0.9rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+.login-card {
+  margin-top: 3rem;
+}
+
+.subtitle {
+  color: var(--muted);
+}
+
+.field {
+  display: block;
+  margin: 0.8rem 0;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+input,
+select {
+  width: 100%;
+  margin-top: 0.35rem;
+  padding: 0.6rem;
+  border-radius: 10px;
+  border: 1px solid #3a3a65;
+  background: #0d0d1e;
+  color: var(--text);
+}
+
+.hero-panel {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: center;
+}
+
+.avatar {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  border: 3px solid var(--gold);
+  background: linear-gradient(180deg, #242462, #101027);
+  box-shadow: 0 0 20px rgba(58, 145, 255, 0.55);
+}
+
+.avatar.mid {
+  border-color: #98d0ff;
+  box-shadow: 0 0 28px rgba(140, 108, 255, 0.75);
+}
+
+.avatar.high {
+  border-color: var(--gold);
+  box-shadow: 0 0 36px rgba(246, 194, 62, 0.95);
+}
+
+.level {
+  font-size: 1.1rem;
+  margin: 0.4rem 0;
+}
+
+.xp-track {
+  width: 100%;
+  height: 14px;
+  border-radius: 999px;
+  overflow: hidden;
+  background: #101022;
+  border: 1px solid #31315f;
+}
+
+.xp-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--purple), var(--blue));
+  width: 0;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.6rem;
+}
+
+.stat {
+  background: #0e0e1d;
+  border: 1px solid #2a2a4a;
+  border-radius: 12px;
+  padding: 0.6rem;
+}
+
+.mission,
+.shop-item,
+.dungeon,
+.achievement {
+  border: 1px solid #30305a;
+  border-radius: 12px;
+  padding: 0.65rem;
+  margin-bottom: 0.55rem;
+  background: #121227;
+}
+
+.title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+button {
+  border: 0;
+  border-radius: 10px;
+  color: white;
+  font-weight: 600;
+  padding: 0.5rem 0.7rem;
+  background: linear-gradient(90deg, var(--purple), var(--blue));
+}
+
+button:disabled {
+  opacity: 0.45;
+}
+
+.progress-bar {
+  height: 10px;
+  border-radius: 999px;
+  background: #0e0e21;
+  border: 1px solid #2c2c57;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #28ffb8, #24a6ff);
+}
+
+.tab-bar {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(440px, 100%);
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 0.3rem;
+  background: #121227;
+  border-top: 1px solid #2d2d4a;
+  padding: 0.5rem;
+}
+
+.tab {
+  background: #1a1a37;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 0.76rem;
+}
+
+.tab.active {
+  background: linear-gradient(90deg, var(--purple), var(--blue));
+}
+
+.small {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.epic {
+  color: var(--gold);
+}

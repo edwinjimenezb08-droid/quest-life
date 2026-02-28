@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QuestLife</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <main id="content"></main>
+      <nav class="tab-bar hidden" id="tabs"></nav>
+    </div>
+
+    <template id="login-template">
+      <section class="card login-card">
+        <h1>QuestLife</h1>
+        <p class="subtitle">Convierte tu disciplina en progreso RPG.</p>
+
+        <label class="field">
+          Nombre del guerrero
+          <input id="playerName" maxlength="28" placeholder="Ej: Alex" />
+        </label>
+
+        <label class="field">
+          Clase inicial
+          <select id="playerClass">
+            <option value="Cazador">Cazador</option>
+            <option value="Guardián">Guardián</option>
+            <option value="Sabio">Sabio</option>
+            <option value="Asesino">Asesino</option>
+          </select>
+        </label>
+
+        <button id="startJourney">Iniciar aventura</button>
+      </section>
+    </template>
+
+    <template id="home-template">
+      <section class="card hero-panel">
+        <div>
+          <h2 id="avatarName"></h2>
+          <p id="avatarTier"></p>
+          <p class="level">Nivel <span id="level"></span></p>
+          <div class="xp-track">
+            <div class="xp-fill" id="xpFill"></div>
+          </div>
+          <p id="xpText"></p>
+        </div>
+        <div class="avatar" id="avatarVisual"></div>
+      </section>
+
+      <section class="stats-grid" id="statsGrid"></section>
+
+      <section class="card">
+        <h3>Racha actual 🔥</h3>
+        <p><strong id="streak"></strong> días consecutivos</p>
+        <p id="multiplier"></p>
+      </section>
+
+      <section class="card">
+        <h3>Misión diaria fija</h3>
+        <div id="fixedDailyMission"></div>
+      </section>
+
+      <section class="card">
+        <h3>Misiones del día (rotan)</h3>
+        <div id="dailyMissions"></div>
+      </section>
+    </template>
+
+    <template id="missions-template">
+      <section class="card">
+        <h3>Misión diaria fija</h3>
+        <div id="fixedMissionList"></div>
+      </section>
+      <section class="card">
+        <h3>Misiones del día (cambian cada día)</h3>
+        <div id="rotatingMissionList"></div>
+      </section>
+      <section class="card">
+        <h3>Misiones secundarias</h3>
+        <div id="secondaryMissions"></div>
+      </section>
+    </template>
+
+    <template id="dungeons-template">
+      <section class="card">
+        <h3>Mazmorras activas</h3>
+        <div id="dungeons"></div>
+      </section>
+    </template>
+
+    <template id="shop-template">
+      <section class="card">
+        <h3>Tienda del Sistema</h3>
+        <p>Oro disponible: <strong id="gold"></strong></p>
+        <div id="shopItems"></div>
+      </section>
+    </template>
+
+    <template id="profile-template">
+      <section class="card">
+        <h3>Perfil del guerrero</h3>
+        <p>Nombre: <strong id="profileName"></strong></p>
+        <p>Clase: <strong id="profileClass"></strong></p>
+        <p>Nivel máximo alcanzado: <strong id="maxLevel"></strong></p>
+        <p>Misiones completadas: <strong id="missionsDone"></strong></p>
+        <p>Oro total ganado: <strong id="goldEarned"></strong></p>
+      </section>
+      <section class="card">
+        <h3>Logros</h3>
+        <div id="achievements"></div>
+      </section>
+      <section class="card">
+        <h3>Inventario</h3>
+        <div id="inventory"></div>
+      </section>
+    </template>
+
+    <script src="app.js"></script>
+  </body>
+</html>
